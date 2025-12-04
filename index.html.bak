@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dr. Apurvanand Sahay | Assistant Professor (CSE)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Default SEO meta – can be overridden from dashboard -->
+  <meta name="description" content="Dr. Apurvanand Sahay – Ph.D., Assistant Professor (CSE) specializing in Model-Driven Engineering, Machine Learning, and Artificial Intelligence." />
+  <meta name="keywords" content="Apurvanand Sahay, Model-Driven Engineering, Machine Learning, Assistant Professor, AI, Low-code" />
+  <meta property="og:title" content="Dr. Apurvanand Sahay" />
+  <meta property="og:description" content="Assistant Professor (CSE) | Model-Driven Engineering & Machine Learning Researcher" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="layout-wide">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">AS</a>
+
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+        🌙
+      </button>
+      <a href="https://www.linkedin.com/in/apurvanand-sahay-7b564939/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5H12.7v2.11h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V24h-4.56v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.34V8.5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Dr. Apurvanand Sahay</p>
+        <h1>Assistant Professor (CSE) & Researcher</h1>
+        <p class="tagline">
+          Ph.D. in Model-Driven Engineering; working at the intersection of low-code platforms, machine learning, and AI-driven analytics.
+        </p>
+        <div class="hero-actions">
+          <a href="assets/docs/CV_Apurvanand_04122025.pdf" class="btn primary" target="_blank" rel="noopener">
+            View Resume
+          </a>
+          <a href="contact.html" class="btn ghost">Contact</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-inner">
+          <img src="assets/images/profile.jpg" alt="Profile photo of Dr. Apurvanand Sahay" data-alt-id="profile-main">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro / Summary -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h2>Brief Overview</h2>
+        <p>
+          I am a Ph.D. scholar turned Assistant Professor (Computer Science & Engineering), currently with Birla Institute of Technology Mesra, Off-Campus Deoghar. My academic and research journey spans Model-Driven Engineering, low-code development platforms, machine learning, and intelligent optimization techniques.
+        </p>
+        <p>
+          I enjoy teaching core computer science subjects such as Algorithms, Data Structures, User Interface Design, Artificial Intelligence, and Machine Learning while actively contributing to research in AI, Big Data, and model transformation composition.
+        </p>
+      </div>
+      <div>
+        <h3>Current Focus</h3>
+        <ul class="pill-list">
+          <li>Low-code & Model-Driven Engineering</li>
+          <li>Machine Learning & AI applications</li>
+          <li>Optimization & Metaheuristic algorithms</li>
+          <li>Bioinformatics & Healthcare analytics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section bg-muted">
+    <div class="container">
+      <h2>Skills & Technical Exposure</h2>
+      <div class="chips-grid">
+        <div class="chip-card">
+          <h3>Programming</h3>
+          <p>C, C++, PL/SQL, R, Java, Python, JavaScript</p>
+        </div>
+        <div class="chip-card">
+          <h3>Data & Platforms</h3>
+          <p>SQL, PostgreSQL, RabbitMQ, RFID & sensor data, Neural Compute Stick, Raspberry Pi</p>
+        </div>
+        <div class="chip-card">
+          <h3>Web & UI</h3>
+          <p>HTML, CSS, .NET, User Interface Design, Low-Code Platforms</p>
+        </div>
+        <div class="chip-card">
+          <h3>Research Domains</h3>
+          <p>Model-Driven Engineering, Low-code BPM, AI & ML, Bioinformatics, Optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Highlights -->
+  <section class="section">
+    <div class="container">
+      <h2>Recent Roles & Responsibilities</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>Assistant Professor (CSE)</h3>
+          <p class="timeline-meta">Birla Institute of Technology Mesra, Off-Campus Deoghar &middot; Nov 2025 – Present</p>
+          <ul>
+            <li>Teaching Design and Analysis of Algorithms, Artificial Intelligence, and Machine Learning.</li>
+            <li>Guiding students in AI & ML projects and supervising project vivas.</li>
+            <li>Submitting and developing research manuscripts in AI and ML domains.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Assistant Professor</h3>
+          <p class="timeline-meta">Amity University Uttar Pradesh, Noida &middot; Jan 2025 – Oct 2025</p>
+          <ul>
+            <li>Taught Essentials of Machine Learning, Algorithms & Data Structures, and Analytical Ability & Digital Awareness.</li>
+            <li>Worked on NLP and AI techniques for disease identification such as hypertrophic cardiomyopathy.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <h3>Assistant Professor</h3>
+          <p class="timeline-meta">Amrita Vishwa Vidyapeetham, Bengaluru &middot; Mar 2023 – Dec 2024</p>
+          <ul>
+            <li>Taught core CS courses including Data Structures & Algorithms, UI Design, C Programming, and Mining of Massive Datasets.</li>
+            <li>Conducted research on model transformation composition, disease regression, and bioinformatics using AI and ML.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements / Publications -->
+  <section class="section bg-muted">
+    <div class="container">
+      <h2>Selected Publications & Research</h2>
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Multi-objective Model Transformation Chain Exploration</h3>
+          <p>Information and Software Technology (2024). Explores MOMoT-based optimization of transformation chains in model-driven engineering.</p>
+        </article>
+        <article class="card">
+          <h3>Low-Code Development Platforms in BPM</h3>
+          <p>Software: Practice and Experience (2023). Analyses business process management capabilities of low-code platforms.</p>
+        </article>
+        <article class="card">
+          <h3>Supporting Understanding of Low-Code Platforms</h3>
+          <p>Euromicro SEAA (2020). Comparative study helping engineers select suitable low-code development platforms.</p>
+        </article>
+        <article class="card">
+          <h3>AI for Healthcare & Agriculture</h3>
+          <p>Recent works include lung cancer image classification, plant disease detection, and cervical cancer risk analysis using ML and deep learning.</p>
+        </article>
+      </div>
+      <a class="btn ghost" href="https://scholar.google.it/citations?hl=en&user=r9PtMIcAAAAJ" target="_blank" rel="noopener">
+        View full publication list
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-logo">Dr. Apurvanand Sahay</p>
+      <p>Assistant Professor (CSE), researcher in Model-Driven Engineering & AI.</p>
+    </div>
+     <div>
+     <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:a_sahay@bitmesra.ac.in">a_sahay@bitmesra.ac.in</a></p>
+      <p><a href="tel:+918957436943">+91-8957436943</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/apurvanand-sahay-7b564939/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5H12.7v2.11h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V24h-4.56v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.34V8.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <p class="footer-bottom">© <span id="year"></span> Apurvanand Sahay. All rights reserved.</p>
+</footer>
+</body>
+</html>

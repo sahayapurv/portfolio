@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Dr. Apurvanand Sahay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dashboard for managing content, posts, themes, and SEO settings." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/dashboard.js"></script>
+</head>
+<body class="layout-wide">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">AS</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Dashboard</h1>
+      <p>Manage site content, posts, themes, layouts, and SEO settings.</p>
+    </div>
+  </section>
+
+  <!-- Login Panel -->
+  <section class="section" id="loginSection">
+    <div class="container form-card">
+      <h2>Login</h2>
+      <p class="muted">Default credentials: <code>admin / admin123</code> (change after first login in the Settings tab).</p>
+      <div class="form-group">
+        <label for="loginUser">Username</label>
+        <input type="text" id="loginUser" />
+      </div>
+      <div class="form-group">
+        <label for="loginPass">Password</label>
+        <input type="password" id="loginPass" />
+      </div>
+      <button class="btn primary" id="loginBtn">Login</button>
+      <p id="loginError" class="error-text"></p>
+    </div>
+  </section>
+
+  <!-- Dashboard Content -->
+  <section class="section hidden" id="dashboardSection">
+    <div class="container dashboard-grid">
+      <aside class="dashboard-sidebar">
+        <button class="tab-btn active" data-tab="tab-content">Content</button>
+        <button class="tab-btn" data-tab="tab-posts">Posts</button>
+        <button class="tab-btn" data-tab="tab-seo">SEO</button>
+        <button class="tab-btn" data-tab="tab-theme">Theme</button>
+        <button class="tab-btn" data-tab="tab-images">Images</button>
+        <button class="tab-btn" data-tab="tab-settings">Settings</button>
+      </aside>
+
+      <div class="dashboard-main">
+        <!-- Content tab -->
+        <div class="tab-panel active" id="tab-content">
+          <h2>Editable Text Snippets</h2>
+          <p class="muted">These map to key areas on the site (hero tagline, overview, etc.).</p>
+          <div class="form-group">
+            <label for="heroTagline">Home hero tagline</label>
+            <textarea id="heroTagline" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="homeOverview">Home overview text</label>
+            <textarea id="homeOverview" rows="4"></textarea>
+          </div>
+          <button class="btn primary" id="saveContentBtn">Save Content</button>
+          <p id="contentSaveStatus" class="success-text"></p>
+        </div>
+
+        <!-- Posts tab -->
+        <div class="tab-panel" id="tab-posts">
+          <div class="tab-header-between">
+            <h2>Posts</h2>
+            <button class="btn ghost" id="newPostBtn">+ New Post</button>
+          </div>
+
+          <div id="postFormWrapper" class="form-card hidden">
+            <h3 id="postFormTitle">New Post</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="postTitleInput">Title</label>
+                <input type="text" id="postTitleInput" />
+              </div>
+              <div class="form-group">
+                <label for="postSlugInput">Slug (URL id)</label>
+                <input type="text" id="postSlugInput" placeholder="e.g. low-code-model-transformations" />
+              </div>
+              <div class="form-group">
+                <label for="postCategoryInput">Category</label>
+                <input type="text" id="postCategoryInput" placeholder="Model-Driven Engineering" />
+              </div>
+              <div class="form-group">
+                <label for="postTagsInput">Tags (comma separated)</label>
+                <input type="text" id="postTagsInput" placeholder="MDE, low-code, ML" />
+              </div>
+              <div class="form-group">
+                <label for="postBannerInput">Banner Image URL</label>
+                <input type="text" id="postBannerInput" placeholder="https://..." />
+              </div>
+              <div class="form-group full">
+                <label for="postContentInput">Content (HTML allowed)</label>
+                <textarea id="postContentInput" rows="6"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="postSeoTitleInput">SEO Title</label>
+                <input type="text" id="postSeoTitleInput" />
+              </div>
+              <div class="form-group">
+                <label for="postSeoDescInput">SEO Description</label>
+                <textarea id="postSeoDescInput" rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="postSeoKeywordsInput">SEO Keywords (comma separated)</label>
+                <input type="text" id="postSeoKeywordsInput" />
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn primary" id="savePostBtn">Save Post</button>
+              <button class="btn ghost" id="cancelPostBtn">Cancel</button>
+            </div>
+            <p id="postSaveStatus" class="success-text"></p>
+          </div>
+
+          <h3>Existing Posts</h3>
+          <table class="table" id="postsTable">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <!-- SEO tab -->
+        <div class="tab-panel" id="tab-seo">
+          <h2>Page-level SEO</h2>
+          <p class="muted">Configure title, description, and keywords for each static page. Posts use their own SEO fields.</p>
+
+          <div class="form-group">
+            <label for="seoPageSelect">Select page</label>
+            <select id="seoPageSelect">
+              <option value="index">Home</option>
+              <option value="about">About</option>
+              <option value="posts">Posts</option>
+              <option value="contact">Contact</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="seoTitle">Meta Title</label>
+            <input type="text" id="seoTitle" />
+          </div>
+          <div class="form-group">
+            <label for="seoDescription">Meta Description</label>
+            <textarea id="seoDescription" rows="2"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="seoKeywords">Meta Keywords</label>
+            <input type="text" id="seoKeywords" />
+          </div>
+          <button class="btn primary" id="saveSeoBtn">Save SEO</button>
+          <p id="seoSaveStatus" class="success-text"></p>
+
+          <hr />
+          <h3>Sitemap Generator</h3>
+          <p class="muted">Generates a simple <code>sitemap.xml</code> including static pages and all posts.</p>
+          <button class="btn ghost" id="generateSitemapBtn">Generate Sitemap</button>
+          <textarea id="sitemapOutput" rows="8" class="mt-2" readonly></textarea>
+        </div>
+
+        <!-- Theme tab -->
+        <div class="tab-panel" id="tab-theme">
+          <h2>Theme & Layout</h2>
+          <div class="form-group">
+            <label for="themeModeSelect">Theme mode</label>
+            <select id="themeModeSelect">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="layoutSelect">Layout</label>
+            <select id="layoutSelect">
+              <option value="layout-wide">Wide</option>
+              <option value="layout-boxed">Boxed</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="primaryColorInput">Primary color</label>
+            <input type="color" id="primaryColorInput" value="#2563eb" />
+          </div>
+          <div class="form-group">
+            <label for="fontSelect">Base font family</label>
+            <select id="fontSelect">
+              <option value="system">System Sans (Default)</option>
+              <option value="serif">Serif</option>
+              <option value="mono">Monospace</option>
+            </select>
+          </div>
+          <button class="btn primary" id="saveThemeBtn">Save Theme</button>
+          <p id="themeSaveStatus" class="success-text"></p>
+        </div>
+
+        <!-- Images tab -->
+        <div class="tab-panel" id="tab-images">
+          <h2>Image Alt Text</h2>
+          <p class="muted">Add accessible alt text for images by ID. For example, the home hero image uses ID <code>profile-main</code>.</p>
+          <div class="form-group">
+            <label for="imageIdInput">Image ID</label>
+            <input type="text" id="imageIdInput" placeholder="profile-main" />
+          </div>
+          <div class="form-group">
+            <label for="imageAltInput">Alt text</label>
+            <textarea id="imageAltInput" rows="2" placeholder="Portrait of Dr. Apurvanand Sahay"></textarea>
+          </div>
+          <button class="btn primary" id="saveImageAltBtn">Save Alt Text</button>
+          <p id="imageAltStatus" class="success-text"></p>
+
+          <h3>Current Alt Texts</h3>
+          <ul id="imageAltList" class="simple-list"></ul>
+        </div>
+
+        <!-- Settings tab -->
+        <div class="tab-panel" id="tab-settings">
+          <h2>Dashboard Settings</h2>
+          <div class="form-group">
+            <label for="newUsername">Change username</label>
+            <input type="text" id="newUsername" placeholder="admin" />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Change password</label>
+            <input type="password" id="newPassword" placeholder="New password" />
+          </div>
+          <button class="btn primary" id="saveCredsBtn">Save Credentials</button>
+          <p id="credsSaveStatus" class="success-text"></p>
+
+          <hr />
+          <h3>Danger Zone</h3>
+          <p class="muted">Clear all CMS data (posts, SEO, content, alt texts, theme) from this browser’s local storage.</p>
+          <button class="btn danger" id="resetAllBtn">Reset All Data</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-logo">Dr. Apurvanand Sahay</p>
+      <p>Assistant Professor (CSE), researcher in Model-Driven Engineering & AI.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:a_sahay@bitmesra.ac.in">a_sahay@bitmesra.ac.in</a></p>
+      <p><a href="tel:+918957436943">+91-8957436943</a></p>
+    </div>
+  </div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <p class="footer-bottom">© <span id="year"></span> Apurvanand Sahay. All rights reserved.</p>
+</footer>
+</body>
+</html>

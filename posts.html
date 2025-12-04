@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Posts | Dr. Apurvanand Sahay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical posts and research notes by Dr. Apurvanand Sahay." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body class="layout-wide">
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">AS</a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html" class="active">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      <a href="https://www.linkedin.com/in/apurvanand-sahay-7b564939/" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5H12.7v2.11h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V24h-4.56v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.34V8.5z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Posts</h1>
+      <p>Research notes, teaching insights, and thoughts on AI, ML, and Model-Driven Engineering.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- List view -->
+      <div id="postsListView" class="cards-grid"></div>
+
+      <!-- Detail view -->
+      <article id="postDetailView" class="post-detail hidden">
+        <a href="posts.html" class="back-link">← Back to all posts</a>
+        <img id="postBanner" class="post-banner" src="" alt="" />
+        <h1 id="postTitle"></h1>
+        <p class="post-meta">
+          <span id="postAuthor"></span> ·
+          <span id="postDate"></span> ·
+          <span id="postCategory"></span>
+        </p>
+        <div id="postContent" class="post-content"></div>
+        <div class="post-tags" id="postTags"></div>
+        <div class="share-bar">
+          <span>Share:</span>
+          <button class="share-btn" data-platform="linkedin">LinkedIn</button>
+          <button class="share-btn" data-platform="twitter">X</button>
+          <button class="share-btn" data-platform="facebook">Facebook</button>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-logo">Dr. Apurvanand Sahay</p>
+      <p>Assistant Professor (CSE), researcher in Model-Driven Engineering & AI.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:a_sahay@bitmesra.ac.in">a_sahay@bitmesra.ac.in</a></p>
+      <p><a href="tel:+918957436943">+91-8957436943</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/apurvanand-sahay-7b564939/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5H12.7v2.11h.06c.61-1.16 2.1-2.38 4.33-2.38 4.63 0 5.49 3.05 5.49 7.01V24h-4.56v-7.46c0-1.78-.03-4.07-2.48-4.07-2.48 0-2.86 1.94-2.86 3.94V24H8.34V8.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+  <p class="footer-bottom">© <span id="year"></span> Apurvanand Sahay. All rights reserved.</p>
+</footer>
+
+<script>
+  // Simple posts rendering using main.js helpers
+  document.addEventListener('DOMContentLoaded', () => {
+    if (!window.SiteCMS) return;
+    SiteCMS.renderPostsPage();
+  });
+</script>
+</body>
+</html>
